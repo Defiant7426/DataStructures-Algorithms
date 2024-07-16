@@ -186,3 +186,11 @@ In our Nemo example , the worst-case scenario occurs when "Nemo" is at the last 
 ## Rule 2: Remove Constants
 
 When expressing Big O notation, we ignore constant factors. For example, O(2n) simplifies to O(n) because constants do not significantly affect the growth rate of the function.
+
+## Rule 3: Different terms for inputs
+
+When an algorithm has different inputs, we must consider each input separately. For example, if a function processes two separate arrays, its time complexity would be O(a + b), where 'a' and 'b' are the lengths of the arrays.
+
+## Rule 4: Drop Non-Dominant Terms
+
+In Big O notation, we only keep the term with the highest growth rate, as it dominates the overall complexity. For example, O(n^2 + n) simplifies to O(n^2).
