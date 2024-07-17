@@ -194,3 +194,66 @@ When an algorithm has different inputs, we must consider each input separately. 
 ## Rule 4: Drop Non-Dominant Terms
 
 In Big O notation, we only keep the term with the highest growth rate, as it dominates the overall complexity. For example, O(n^2 + n) simplifies to O(n^2).
+
+<aside>
+💡 Remember our two rules, readable and scalable:
+
+Data structures + Algorithms = Programas
+
+</aside>
+
+# 6. O(n!)
+
+O(n!) describes an algorithm with factorial time complexity, which is one of the most expensive in terms of growth rate. This type of complexity occurs in algorithms that involve generating all possible permutations of a set, such as certain brute-force solutions.
+
+For example, solving the traveling salesman problem by evaluating all possible routes would have a time complexity of O(n!).
+
+# 7. Three Pillars Of Programming
+
+## Readable
+
+Readable code allows other developers to understand and maintain it easily. This involves using meaningful variable names, commenting on complex logic, and following consistent coding standards.
+
+## Memory
+
+Efficient memory usage ensures that the program runs smoothly and can handle larger datasets without running into performance issues. This involves choosing appropriate data structures and managing resources effectively.
+
+### Space Complexity
+
+Space complexity refers to the amount of memory an algorithm needs to run as a function of the size of the input data. It is crucial to consider space complexity alongside time complexity to ensure efficient resource usage.
+
+### What causes space complexity
+
+- Variables
+- Data Structures
+- Fuction call
+- Allocations
+
+### Example
+
+```python
+def sayHi(n):
+  for i in range(n):
+    print("Hi")
+```
+
+What is the space complexity of this code:
+
+The space complexity of this code is O(1). This is because the function `sayHi` only uses a single loop and does not require additional memory that scales with the input size `n`. The memory used by the loop variable `i` is constant.
+
+```python
+def sayHi_v2(n):
+  arr = []
+  for i in range(n):
+    arr.append("Hi Friend")
+  
+  return arr
+```
+
+What is the space complexity of this code?
+
+The space complexity of this code is O(n). This is because the function `sayHi_v2` creates a list `arr` and appends a new string to it `n` times, leading to memory usage that scales linearly with the input siz
+
+## Speed
+
+Optimizing for speed means ensuring that the code executes as quickly as possible. This can be achieved by using efficient algorithms and minimizing unnecessary computations.
